@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #c5e4c7;
+}
+
+.container {
+    margin-top: 50px;
+    width: 800px;
+    height: 450px;
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+}
+
+.wrapper {
+    padding: 40px;
+    width: 50%;
+}
+
+input {
+    width: 80%;
+    border: none;
+    background: #f3f8fb;
+}
