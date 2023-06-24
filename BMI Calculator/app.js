@@ -1,7 +1,7 @@
 window.onload = () => {
     // console.log(document.querySelector('#btn'));
     const button = document.querySelector('#btn');
-    button.addEventListener('click', calculateBmi());
+    button.addEventListener('click', calculateBmi);
 }
 
 function calculateBmi() {
@@ -17,7 +17,7 @@ function calculateBmi() {
         return;
     }
 
-    const bmi = (weight / (height * height) /10000).toFixed(2);
+    const bmi = (weight / ((height * height) /10000)).toFixed(2);
 
     if(bmi < 18.5){
         result.innerText = `Under Weight: ${bmi}`;
