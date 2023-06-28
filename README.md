@@ -5,6 +5,7 @@
 3. Analogue Clock
 4. Countdown Timer
 5. Loan Calculator
-6. Movie webpage
-7. Pixel Art Generator
-8. Tip Calculator
+6. Monthly Calendar
+7. Movie webpage
+8. Pixel Art Generator
+9. Tip Calculator
