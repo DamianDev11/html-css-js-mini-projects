@@ -15,29 +15,33 @@
     --light-success:#bbf7d0;
 }
 
-* {
-    margin:0;
+*{
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
+
+.bx{
+    font-size: 1.7rem;
+}
+
 a{
     text-decoration: none;
-
 }
 
 li{
     list-style: none;
-
 }
 
-html {
+html{
     overflow-x: hidden;
 }
-body.dark {
-    --light:#181a1e;
-    --grey:#25252c;
-    --daark:#fbfbfb;
+
+body.dark{
+    --light: #181a1e;
+    --grey: #25252c;
+    --dark: #fbfbfb
 }
 
 body{
@@ -45,7 +49,7 @@ body{
     overflow-x: hidden;
 }
 
-.sidebar {
+.sidebar{
     position: fixed;
     top: 0;
     left: 0;
@@ -60,10 +64,9 @@ body{
 
 .sidebar::-webkit-scrollbar{
     display: none;
-
 }
 
-.sidebar.close {
+.sidebar.close{
     width: 60px;
 }
 
@@ -79,20 +82,20 @@ body{
     box-sizing: content-box;
 }
 
-.sidebar .logo .logo-name span {
+.sidebar .logo .logo-name span{
     color: var(--dark);
 }
 
 .sidebar .logo .bx{
-    min-width:60px;
+    min-width: 60px;
     display: flex;
     justify-content: center;
-    font-size:2.2rem;
+    font-size: 2.2rem;
 }
-.sidebar .side-menu {
-    width:100%;
-    margin-top: 48px;
 
+.sidebar .side-menu{
+    width: 100%;
+    margin-top: 48px;
 }
 
 .sidebar .side-menu li{
@@ -100,7 +103,6 @@ body{
     background: transparent;
     margin-left: 6px;
     border-radius: 48px 0 0 48px;
-    border-radius: 4px;
     padding: 4px;
 }
 
@@ -147,28 +149,27 @@ body{
     transition: all 0.3s ease;
 }
 
-.sidebar .side-menu li.active a {
+.sidebar .side-menu li.active a{
     color: var(--success);
 }
 
 .sidebar.close .side-menu li a{
-    width: calc(48px - (4px *2));
+    width: calc(48px - (4px * 2));
     transition: all 0.3s ease;
 }
 
-.sidebar .side-menu li a .bx {
+.sidebar .side-menu li a .bx{
     min-width: calc(60px - ((4px + 6px) * 2));
     display: flex;
-    font-size:1.6rem;
+    font-size: 1.6rem;
     justify-content: center;
-
 }
 
 .sidebar .side-menu li a.logout{
     color: var(--danger);
 }
 
-.content {
+.content{
     position: relative;
     width: calc(100% - 230px);
     left: 230px;
@@ -176,11 +177,11 @@ body{
 }
 
 .sidebar.close~.content{
-    width: calc(100%- 60px);
+    width: calc(100% - 60px);
     left: 60px;
-
 }
-.content nav {
+
+.content nav{
     height: 56px;
     background: var(--light);
     padding: 0 24px 0 0;
@@ -205,30 +206,27 @@ body{
 }
 
 .content nav a{
-    color: var(--daark);
-
+    color: var(--dark);
 }
 
-.content nav .bx.bx-menu {
+.content nav .bx.bx-menu{
     cursor: pointer;
-    color: var(--daark);
+    color: var(--dark);
 }
 
-.content nav form {
+.content nav form{
     max-width: 400px;
     width: 100%;
     margin-right: auto;
 }
 
-.content nav form .form-input {
+.content nav form .form-input{
     display: flex;
     align-items: center;
     height: 36px;
-
 }
 
-
-.content nav form .form-input input {
+.content nav form .form-input input{
     flex-grow: 1;
     padding: 0 16px;
     height: 100%;
@@ -237,10 +235,10 @@ body{
     border-radius: 36px 0 0 36px;
     outline: none;
     width: 100%;
-    color: var(--daark);
+    color: var(--dark);
 }
 
-.content nav form .form-input button {
+.content nav form .form-input button{
     width: 80px;
     height: 100%;
     display: flex;
@@ -255,13 +253,12 @@ body{
     cursor: pointer;
 }
 
-.content nav .notif {
+.content nav .notif{
     font-size: 20px;
     position: relative;
-    
 }
 
-.content nav .notif .count {
+.content nav .notif .count{
     position: absolute;
     top: -6px;
     right: -6px;
@@ -272,25 +269,27 @@ body{
     color: var(--light);
     border: 2px solid var(--light);
     font-weight: 700;
+    font-size: 12px;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.content nav .profile img {
+.content nav .profile img{
     width: 36px;
     height: 36px;
     object-fit: cover;
     border-radius: 50%;
 }
 
-.content nav .theme-toggle {
+.content nav .theme-toggle{
     display: block;
     min-width: 50px;
     height: 25px;
     background: var(--grey);
     cursor: pointer;
-   position: relative;
-   border-radius: 25px; 
+    position: relative;
+    border-radius: 25px;
 }
 
 .content nav .theme-toggle::before{
@@ -303,7 +302,6 @@ body{
     background: var(--primary);
     border-radius: 50%;
     transition: all 0.3s ease;
-
 }
 
 .content nav #theme-toggle:checked+.theme-toggle::before{
@@ -316,7 +314,7 @@ body{
     max-height: calc(100vh - 56px);
 }
 
-.content main .header {
+.content main .header{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -328,17 +326,17 @@ body{
     font-size: 36px;
     font-weight: 600;
     margin-bottom: 10px;
-    color: var(--daark);
+    color: var(--dark);
 }
 
-.content main .header .left .breadcrumb {
+.content main .header .left .breadcrumb{
     display: flex;
     align-items: center;
     grid-gap: 16px;
 }
 
 .content main .header .left .breadcrumb li{
-    color: var(--daark);
+    color: var(--dark);
 }
 
 .content main .header .left .breadcrumb li a{
@@ -347,8 +345,8 @@ body{
 }
 
 .content main .header .left .breadcrumb li a.active{
-     color: var(--primary);
-     pointer-events: none;
+    color: var(--primary);
+    pointer-events: none;
 }
 
 .content main .header .report{
@@ -362,16 +360,16 @@ body{
     justify-content: center;
     grid-gap: 10px;
     font-weight: 500;
-
 }
 
 .content main .insights{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 24px;
     margin-top: 36px;
 }
 
-.content main .insights li {
+.content main .insights li{
     padding: 24px;
     background: var(--light);
     border-radius: 20px;
@@ -379,7 +377,6 @@ body{
     align-items: center;
     grid-gap: 24px;
     cursor: pointer;
-
 }
 
 .content main .insights li .bx{
@@ -391,18 +388,22 @@ body{
     align-items: center;
     justify-content: center;
 }
+
 .content main .insights li:nth-child(1) .bx{
     background: var(--light-primary);
     color: var(--primary);
 }
+
 .content main .insights li:nth-child(2) .bx{
     background: var(--light-warning);
     color: var(--warning);
 }
+
 .content main .insights li:nth-child(3) .bx{
     background: var(--light-success);
     color: var(--success);
 }
+
 .content main .insights li:nth-child(4) .bx{
     background: var(--light-danger);
     color: var(--danger);
@@ -411,32 +412,30 @@ body{
 .content main .insights li .info h3{
     font-size: 24px;
     font-weight: 600;
-    color: var(--daark);
+    color: var(--dark);
 }
 
 .content main .insights li .info p{
-    color: var(--daark);
+    color: var(--dark);
 }
 
-.content main .bottom-data {
+.content main .bottom-data{
     display: flex;
     flex-wrap: wrap;
     grid-gap: 24px;
     margin-top: 24px;
     width: 100%;
-    width: 100%;
-    color: var(--daark);
+    color: var(--dark);
 }
 
 .content main .bottom-data>div{
     border-radius: 20px;
     background: var(--light);
     padding: 24px;
-    overflow: auto;
-    
+    overflow-x: auto;
 }
 
-.content main .bottom-data .header {
+.content main .bottom-data .header{
     display: flex;
     align-items: center;
     grid-gap: 16px;
@@ -447,10 +446,9 @@ body{
     margin-right: auto;
     font-size: 24px;
     font-weight: 600;
-
 }
 
-.content main .bottom-data .header .bx {
+.content main .bottom-data .header .bx{
     cursor: pointer;
 }
 
@@ -473,10 +471,9 @@ body{
 
 .content main .bottom-data .orders table td{
     padding: 16px 0;
-
 }
 
-.content main .bottom-data .orders table tr:first-child{
+.content main .bottom-data .orders table tr td:first-child{
     display: flex;
     align-items: center;
     grid-gap: 12px;
@@ -493,7 +490,6 @@ body{
 .content main .bottom-data .orders table tbody tr{
     cursor: pointer;
     transition: all 0.3s ease;
-
 }
 
 .content main .bottom-data .orders table tbody tr:hover{
@@ -515,6 +511,7 @@ body{
 .content main .bottom-data .orders table tr td .status.process{
     background: var(--primary);
 }
+
 .content main .bottom-data .orders table tr td .status.pending{
     background: var(--warning);
 }
@@ -549,7 +546,7 @@ body{
 }
 
 .content main .bottom-data .reminders .task-list li .bx{
-    cursor: pointer;
+  cursor: pointer;  
 }
 
 .content main .bottom-data .reminders .task-list li.completed{
@@ -560,30 +557,33 @@ body{
     border-left: 10px solid var(--danger);
 }
 
-.content main .bottom-data .reminders .task-list li.last-child{
-    margin-bottom: 0;
+.content main .bottom-data .reminders .task-list li:last-child{
+   margin-bottom: 0;
 }
 
 @media screen and (max-width: 768px) {
     .sidebar{
         width: 200px;
     }
+
     .content{
-        width: calc(100%-60px);
+        width: calc(100% - 60px);
         left: 200px;
     }
+
 }
 
-@media screen and (max-width:576px) {
+@media screen and (max-width: 576px) {
+    
     .content nav form .form-input input{
         display: none;
     }
 
-    .content nav .form-input button{
+    .content nav form .form-input button{
         width: auto;
         height: auto;
         background: transparent;
-        background: var(--daark);
+        color: var(--dark);
         border-radius: none;
     }
 
@@ -591,19 +591,39 @@ body{
         display: block;
         width: 100%;
     }
+
     .content nav form.show .form-input button{
         width: 36px;
         height: 100%;
         color: var(--light);
-        background: var(--daark);
+        background: var(--danger);
         border-radius: 0 36px 36px 0;
     }
 
-    .contentnav form.show~.notif, .content nav form.show~.profile{
+    .content nav form.show~.notif, .content nav form.show~.profile{
         display: none;
     }
-    
+
+    .content main .insights {
+        grid-template-columns: 1fr;
+    }
+
+    .content main .bottom-data .header{
+        min-width: 340px;
+    }
+
+    .content main .bottom-data .orders table{
+        min-width: 340px;
+    }
+
+    .content main .bottom-data .reminders .task-list{
+        min-width: 340px;
+    }
+
 }
+
+
+
 
 
 
