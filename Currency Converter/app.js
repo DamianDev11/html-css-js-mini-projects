@@ -5,30 +5,29 @@ const exIcon = document.querySelector("form .reverse");
 const amount = document.querySelector("form input");
 const exRateTxt = document.querySelector("form .result");
 
-//Event listener for currency dropdown (select)
+// Event listener for currency dropdowns (select)
 
 [fromCur, toCur].forEach((select, i) => {
-  for (let curCode in countryList) {
+  for (let curCode in Country_List) {
     const selected =
       (i === 0 && curCode === "USD") || (i === 1 && curCode === "GBP")
         ? "selected"
         : "";
     select.insertAdjacentHTML(
       "beforeend",
-      `<option value="${curCode}
-        " ${selected}>${curCode}</option>`
+      `<option value="${curCode}" ${selected}>${curCode}</option>`
     );
   }
   select.addEventListener("change", () => {
     const code = select.value;
     const imgTag = select.parentElement.querySelector("img");
-    imgTag.src = `https://flagcdn.com/48x36/${countryList[
+    imgTag.src = `https://flagcdn.com/48x36/${Country_List[
       code
     ].toLowerCase()}.png`;
   });
 });
 
-//Function to get exchange rate from api
+// Function to get exchange rate from api
 
 async function getExchangeRate() {
   const amountVal = amount.value || 1;
@@ -38,15 +37,15 @@ async function getExchangeRate() {
       `https://v6.exchangerate-api.com/v6/c3691017a44a1f6e3f7d69f2/latest/${fromCur.value}`
     );
     const result = await response.json();
-    const exchangerate = result.conversion_rates[toCur.value];
-    const totalExRate = (amountVal * exRateTxt).toFixed(2);
+    const exchangeRate = result.conversion_rates[toCur.value];
+    const totalExRate = (amountVal * exchangeRate).toFixed(2);
     exRateTxt.innerText = `${amountVal} ${fromCur.value} = ${totalExRate} ${toCur.value}`;
   } catch (error) {
     exRateTxt.innerText = "Something went wrong...";
   }
 }
 
-//Event listener for button and exchange icon click
+// Event listeners for button and exchange icon click
 
 window.addEventListener("load", getExchangeRate);
 getBtn.addEventListener("click", (e) => {
@@ -59,7 +58,7 @@ exIcon.addEventListener("click", () => {
   [fromCur, toCur].forEach((select) => {
     const code = select.value;
     const imgTag = select.parentElement.querySelector("img");
-    imgTag.src = `https://flagcdn.com/48x36/${countryList[
+    imgTag.src = `https://flagcdn.com/48x36/${Country_List[
       code
     ].toLowerCase()}.png`;
   });
